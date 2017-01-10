@@ -15,6 +15,12 @@ export default Ember.Route.extend({
       console.log("you're inside 'list' route and item is ", item);
       item.destroyRecord();
       console.log("item has been deleted");
-    }
+    },
+    createItem (newItem) {
+      console.log("you're inside 'list' route and newItem is ", newItem);
+      let item = this.get('store').createRecord('item', newItem);
+      console.log("you're inside 'list' route and item is ", item);
+      item.save();
+    },
   },
 });
