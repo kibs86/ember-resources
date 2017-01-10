@@ -1,3 +1,10 @@
-<h4>{{list.title}}</h4>
-
-{{yield}}
+<!--
+going to the 'list' route and rendering list
+instead of list you could pass 1 or 2 and both links would link to that
+list
+-->
+{{#link-to 'list' list}}
+  <h4>
+    {{list.title}}
+  </h4>
+{{/link-to}}

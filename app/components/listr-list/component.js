@@ -8,5 +8,13 @@ export default Ember.Component.extend({
     toggleListDetail () {
       return this.toggleProperty('listDetailHidden');
     },
+    toggleItemDone (item) {
+      console.log("you're inside toggleItemDone in listr-list component, and item is ", item);
+      this.sendAction('toggleItemDone', item);
+    },
+    deleteItem (item) {
+      console.log("you're inside deleteItem in listr-list component, and item is ", item);
+      this.sendAction('deleteItem', item);
+    },
   },
 });
