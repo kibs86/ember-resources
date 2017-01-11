@@ -9,8 +9,9 @@ export default Ember.Route.extend({
       console.log("create dat shit");
       list.save();
     },
-    cancelCreateList () {
-      this.transitionTo('lists');
+    cancelCreateList (list) {
+      list.rollbackAttributes();
+      console.log("inside lists/new route cancel");
     },
   },
 });
