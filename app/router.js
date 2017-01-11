@@ -7,6 +7,7 @@ const Router = Ember.Router.extend({
 
 Router.map(function () {
   this.route('lists');
+  this.route('lists/new');
   // when you see lists/:list_id path, render whatever is in the list folder
   this.route('list', { path: 'lists/:list_id' });
   this.route('list/edit', { path: 'lists/:list_id/edit' });

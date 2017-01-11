@@ -3,3 +3,5 @@
   {{listr-list/card list=list
                     editList='editList'}}
 {{/each}}
+<!-- if it's a nested route it would be lists.new but otherwise its a slash -->
+{{#link-to 'lists/new'}} Add a New List {{/link-to}}
